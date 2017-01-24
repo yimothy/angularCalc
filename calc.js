@@ -1,7 +1,7 @@
 const module = angular.module('calc', [])
 
-.controller('CalcController', ($scope) => {
-  $scope.test = () => {
+.controller('CalcController', function($scope) {
+  $scope.test = function(){
     console.log('it worked!');
   }
 
