@@ -6,7 +6,7 @@
 </head>
 <body ng-app="calc">
   <div id="calculator" ng-controller="CalcController">
-    <p id="display">NUMBERS!</p>
+    <p id="display"><span> {{storage.result}}<span></p>
     <div id="buttons">
       <p><button ng-click="store(1)">1</button><button ng-click="store(2)">2</button><button ng-click="store(3)">3</button><button ng-click="store('+')">+</button></p>
       <p><button ng-click="store(4)">4</button><button ng-click="store(5)">5</button><button ng-click="store(6)">6</button><button ng-click="store('-')">-</button></p>
