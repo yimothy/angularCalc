@@ -29,6 +29,7 @@ const module = angular.module('calc', [])
     }
     else if ($scope.storage.store.length === 0 && $scope.storage.num !== ''){
       $scope.storage.store.push($scope.storage.num, button)
+      $scope.storage.num = '';
     }
     // $scope.storage.push(button);
     console.log("storage: ", $scope.storage.store)
@@ -36,8 +37,11 @@ const module = angular.module('calc', [])
 
   $scope.calc = function() {
     $scope.storage.store.push($scope.storage.num);
-    $scope.storage.result = $scope.storage.operators[$scope.storage.store[1]]($scope.storage.store[0], $scope.storage.store[2]);
-    console.log('result: ')
+    console.log('storage: ', $scope.storage.store);
+    $scope.storage.result = $scope.storage.operators[$scope.storage.store[1]](parseInt($scope.storage.store[0]), parseInt($scope.storage.store[2]));
+    console.log('result: ', $scope.storage.result);
+    $scope.storage.store = [];
+    $scope.storage.num = '';
   }
 
 })
