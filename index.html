@@ -4,11 +4,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="calc.js"></script>
 </head>
-<body>
+<body ng-controller="CalcController">
   <div id="calculator">
     <p id="display">NUMBERS!</p>
     <div id="buttons">
-      <p><button>1</button><button>2</button><button>3</button><button>+</button></p>
+      <p><button ng-click='test()'>1</button><button>2</button><button>3</button><button>+</button></p>
       <p><button>4</button><button>5</button><button>6</button><button>-</button></p>
       <p><button>7</button><button>8</button><button>9</button><button>x</button></p>
       <p><button>0</button><button>/</button><button>=</button></p>
