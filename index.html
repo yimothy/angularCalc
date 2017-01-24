@@ -8,10 +8,10 @@
   <div id="calculator" ng-controller="CalcController">
     <p id="display">NUMBERS!</p>
     <div id="buttons">
-      <p><button ng-click="test()">1</button><button>2</button><button>3</button><button>+</button></p>
+      <p><button ng-click="store(1)">1</button><button>2</button><button>3</button><button ng-click="store('+')">+</button></p>
       <p><button>4</button><button>5</button><button>6</button><button>-</button></p>
       <p><button>7</button><button>8</button><button>9</button><button>x</button></p>
-      <p><button>0</button><button>/</button><button>=</button></p>
+      <p><button>0</button><button>/</button><button ng-click="calc()">=</button></p>
     </div>
   </div>
 </body>
